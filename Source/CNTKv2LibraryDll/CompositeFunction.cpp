@@ -1326,6 +1326,11 @@ namespace CNTK
                     }
                     break;
                 }
+                case PrimitiveOpType::QuantizedProxyTimes:
+                {
+                    ASSIGN_NEW_NODE(QuantizedProxyTimesNode, network->GetDeviceId(), internalNodeName);
+                    break;
+                }
                 default:
                     CNTK::LogicError("Specified op %S not yet supported", PrimitiveOpTypeName(op).c_str());
                     break;

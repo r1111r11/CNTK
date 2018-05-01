@@ -1087,6 +1087,12 @@ namespace CNTK
                                 RuntimeError("Function '%S': cannot get k>1 items from a scalar.", AsString().c_str());
                             break;
                         }
+                        case PrimitiveOpType::QuantizedProxyTimes:
+                        {
+                            assert(m_inputs.size() == 4);
+                            outputShape = m_inputs[1].Shape();
+                            break;
+                        }
                         default:
                             LogicError("Specified Primitive Function op %S is not supported", PrimitiveOpTypeName(m_op).c_str());
                             break;

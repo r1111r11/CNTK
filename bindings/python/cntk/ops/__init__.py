@@ -3960,3 +3960,18 @@ def mean_variance_normalization(operand, epsilon=0.00001, use_stats_across_chann
         raise ValueError('epsilon must be non-negative.')
     operand = sanitize_input(operand, get_data_type(operand))  
     return mean_variance_normalization(operand, epsilon, use_stats_across_channels, do_variance_scaling, name)
+
+@typemap
+def quantized_proxy_times(v1, v2, v3, v4, name=''):
+    '''
+    A proxy node that helps saving a model with quantized times operation. 
+
+    Example:
+
+    Args:
+
+    Returns:
+        :class:`~cntk.ops.functions.Function`
+    '''
+    from cntk.cntk_py import quantized_proxy_times
+    return quantized_proxy_times(v1,v2,v3,v4, name)

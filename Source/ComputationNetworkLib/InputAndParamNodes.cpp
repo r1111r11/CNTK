@@ -366,7 +366,7 @@ std::tuple<size_t, size_t, char> LearnableParameter<char>::InitRandom(Matrix<cha
     const bool initOnCPUOnly,
     DEVICEID_TYPE deviceId)
 {
-	    return std::make_tuple((size_t)0, (size_t)0, (char)0.0f);
+    RuntimeError("Unsupported template argument(char) in InitRandom");
 }
 
 // initialize by reading a matrix from a text file

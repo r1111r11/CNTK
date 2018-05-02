@@ -29,4 +29,111 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_CpuOnly|x64'">
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="..\CNTKLibraryManagedDll\Helper.cs" Link="Helper.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\ShimApiClasses\AxisShim.cs" Link="ShimApiClasses\AxisShim.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\ShimApiClasses\CNTKLibShim.cs" Link="ShimApiClasses\CNTKLibShim.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\ShimApiClasses\ConstantShim.cs" Link="ShimApiClasses\ConstantShim.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\ShimApiClasses\DeviceDescriptorShim.cs" Link="ShimApiClasses\DeviceDescriptorShim.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\ShimApiClasses\FunctionShim.cs" Link="ShimApiClasses\FunctionShim.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\ShimApiClasses\LearnerShim.cs" Link="ShimApiClasses\LearnerShim.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\ShimApiClasses\MinibatchSourceConfigShim.cs" Link="ShimApiClasses\MinibatchSourceConfigShim.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\ShimApiClasses\MinibatchSourceShim.cs" Link="ShimApiClasses\MinibatchSourceShim.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\ShimApiClasses\NDArrayViewShim.cs" Link="ShimApiClasses\NDArrayViewShim.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\ShimApiClasses\NDMaskShim.cs" Link="ShimApiClasses\NDMaskShim.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\ShimApiClasses\NDShapeShim.cs" Link="ShimApiClasses\NDShapeShim.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\ShimApiClasses\ParameterShim.cs" Link="ShimApiClasses\ParameterShim.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\ShimApiClasses\StreamConfigurationShim.cs" Link="ShimApiClasses\StreamConfigurationShim.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\ShimApiClasses\TrainerShim.cs" Link="ShimApiClasses\TrainerShim.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\ShimApiClasses\ValueShim.cs" Link="ShimApiClasses\ValueShim.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\ShimApiClasses\VariableShim.cs" Link="ShimApiClasses\VariableShim.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\AdditionalLearningOptions.cs" Link="SwigProxyClasses\AdditionalLearningOptions.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\Axis.cs" Link="SwigProxyClasses\Axis.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\AxisVector.cs" Link="SwigProxyClasses\AxisVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\BoolVector.cs" Link="SwigProxyClasses\BoolVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\CharVector.cs" Link="SwigProxyClasses\CharVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\CNTKDictionary.cs" Link="SwigProxyClasses\CNTKDictionary.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\CNTKLib.cs" Link="SwigProxyClasses\CNTKLib.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\CNTKLibPINVOKE.cs" Link="SwigProxyClasses\CNTKLibPINVOKE.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\Constant.cs" Link="SwigProxyClasses\Constant.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\ConstantVector.cs" Link="SwigProxyClasses\ConstantVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\DataType.cs" Link="SwigProxyClasses\DataType.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\DataUnit.cs" Link="SwigProxyClasses\DataUnit.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\DeviceDescriptor.cs" Link="SwigProxyClasses\DeviceDescriptor.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\DeviceDescriptorVector.cs" Link="SwigProxyClasses\DeviceDescriptorVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\DeviceKind.cs" Link="SwigProxyClasses\DeviceKind.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\DictionaryValue.cs" Link="SwigProxyClasses\DictionaryValue.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\DictionaryVector.cs" Link="SwigProxyClasses\DictionaryVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\DoubleVector.cs" Link="SwigProxyClasses\DoubleVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\DoubleVectorVector.cs" Link="SwigProxyClasses\DoubleVectorVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\Evaluator.cs" Link="SwigProxyClasses\Evaluator.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\float16.cs" Link="SwigProxyClasses\float16.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\FloatVector.cs" Link="SwigProxyClasses\FloatVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\FloatVectorVector.cs" Link="SwigProxyClasses\FloatVectorVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\Function.cs" Link="SwigProxyClasses\Function.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\FunctionPtrVector.cs" Link="SwigProxyClasses\FunctionPtrVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\HTKFeatureConfiguration.cs" Link="SwigProxyClasses\HTKFeatureConfiguration.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\HTKFeatureConfigurationVector.cs" Link="SwigProxyClasses\HTKFeatureConfigurationVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\IntVector.cs" Link="SwigProxyClasses\IntVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\Learner.cs" Link="SwigProxyClasses\Learner.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\LearnerVector.cs" Link="SwigProxyClasses\LearnerVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\MaskKind.cs" Link="SwigProxyClasses\MaskKind.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\MinibatchData.cs" Link="SwigProxyClasses\MinibatchData.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\MinibatchInfo.cs" Link="SwigProxyClasses\MinibatchInfo.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\MinibatchSource.cs" Link="SwigProxyClasses\MinibatchSource.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\MinibatchSourceConfig.cs" Link="SwigProxyClasses\MinibatchSourceConfig.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\ModelFormat.cs" Link="SwigProxyClasses\ModelFormat.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\NDArrayView.cs" Link="SwigProxyClasses\NDArrayView.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\NDArrayViewPtrVector.cs" Link="SwigProxyClasses\NDArrayViewPtrVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\NDMask.cs" Link="SwigProxyClasses\NDMask.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\NDShape.cs" Link="SwigProxyClasses\NDShape.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\PaddingMode.cs" Link="SwigProxyClasses\PaddingMode.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\PairDoubleDouble.cs" Link="SwigProxyClasses\PairDoubleDouble.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\PairFloatFloat.cs" Link="SwigProxyClasses\PairFloatFloat.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\PairIntInt.cs" Link="SwigProxyClasses\PairIntInt.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\PairNDArrayViewPtrNDArrayViewPtr.cs" Link="SwigProxyClasses\PairNDArrayViewPtrNDArrayViewPtr.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\PairSizeTDouble.cs" Link="SwigProxyClasses\PairSizeTDouble.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\PairSizeTInt.cs" Link="SwigProxyClasses\PairSizeTInt.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\PairSizeTSizeT.cs" Link="SwigProxyClasses\PairSizeTSizeT.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\Parameter.cs" Link="SwigProxyClasses\Parameter.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\ParameterCloningMethod.cs" Link="SwigProxyClasses\ParameterCloningMethod.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\ParameterVector.cs" Link="SwigProxyClasses\ParameterVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\PoolingType.cs" Link="SwigProxyClasses\PoolingType.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\ProgressWriter.cs" Link="SwigProxyClasses\ProgressWriter.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\ProgressWriterVector.cs" Link="SwigProxyClasses\ProgressWriterVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\SizeTVector.cs" Link="SwigProxyClasses\SizeTVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\SizeTVectorVector.cs" Link="SwigProxyClasses\SizeTVectorVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\StorageFormat.cs" Link="SwigProxyClasses\StorageFormat.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\StreamConfiguration.cs" Link="SwigProxyClasses\StreamConfiguration.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\StreamConfigurationVector.cs" Link="SwigProxyClasses\StreamConfigurationVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\StreamInformation.cs" Link="SwigProxyClasses\StreamInformation.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\StringVector.cs" Link="SwigProxyClasses\StringVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\SWIGTYPE_p_int8_t.cs" Link="SwigProxyClasses\SWIGTYPE_p_int8_t.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\SWIGTYPE_p_void.cs" Link="SwigProxyClasses\SWIGTYPE_p_void.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\TraceLevel.cs" Link="SwigProxyClasses\TraceLevel.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\Trainer.cs" Link="SwigProxyClasses\Trainer.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\TrainingParameterScheduleDouble.cs" Link="SwigProxyClasses\TrainingParameterScheduleDouble.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\UnorderedMapParameterNDArrayViewPtr.cs" Link="SwigProxyClasses\UnorderedMapParameterNDArrayViewPtr.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\UnorderedMapStreamInformationMinibatchData.cs" Link="SwigProxyClasses\UnorderedMapStreamInformationMinibatchData.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\UnorderedMapStreamInformationPairNDArrayViewPtrNDArrayViewPtr.cs" Link="SwigProxyClasses\UnorderedMapStreamInformationPairNDArrayViewPtrNDArrayViewPtr.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\UnorderedMapStringDictionaryValue.cs" Link="SwigProxyClasses\UnorderedMapStringDictionaryValue.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\UnorderedMapVariableMinibatchData.cs" Link="SwigProxyClasses\UnorderedMapVariableMinibatchData.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\UnorderedMapVariableValuePtr.cs" Link="SwigProxyClasses\UnorderedMapVariableValuePtr.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\UnorderedMapVariableVariable.cs" Link="SwigProxyClasses\UnorderedMapVariableVariable.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\UnsignedCharVector.cs" Link="SwigProxyClasses\UnsignedCharVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\Value.cs" Link="SwigProxyClasses\Value.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\Variable.cs" Link="SwigProxyClasses\Variable.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\VariableKind.cs" Link="SwigProxyClasses\VariableKind.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\VariablePair.cs" Link="SwigProxyClasses\VariablePair.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\VariablePairVector.cs" Link="SwigProxyClasses\VariablePairVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\VariableVector.cs" Link="SwigProxyClasses\VariableVector.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\SwigProxyClasses\VectorPairSizeTDouble.cs" Link="SwigProxyClasses\VectorPairSizeTDouble.cs" />
+    <Compile Include="..\CNTKLibraryManagedDll\Utils.cs" Link="Utils.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="SwigProxyClasses\" />
+    <Folder Include="ShimApiClasses\" />
+  </ItemGroup>
+
 </Project>

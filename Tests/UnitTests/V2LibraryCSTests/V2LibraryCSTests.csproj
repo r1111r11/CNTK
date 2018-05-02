@@ -52,7 +52,10 @@
     <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cntk.Core.Managed.Standard-2.5.1, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64" />
+    <Reference Include="Cntk.Core.Managed.Standard-$(CntkComponentVersion), Version=1.0.0.0, Culture=neutral, PublicKeyToken=21fff2ec8197defe, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\x64\$(Configuration)\Cntk.Core.Managed.Standard-$(CntkComponentVersion).dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
   </ItemGroup>
@@ -73,12 +76,6 @@
     <Compile Include="TensorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UtilTests.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\bindings\csharp\CNTKLibraryManagedDll-Standard\CNTKLibraryManagedDll-Standard.csproj">
-      <Project>{3a09ffe0-7865-4268-8301-73ed64bb75df}</Project>
-      <Name>CNTKLibraryManagedDll-Standard</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

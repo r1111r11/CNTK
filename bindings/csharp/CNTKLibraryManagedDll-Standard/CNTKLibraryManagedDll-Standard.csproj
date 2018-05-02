@@ -12,6 +12,7 @@
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <RootNamespace>CNTK</RootNamespace>
     <OutputPath>..\..\..\x64\$(Configuration)</OutputPath>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_NoOpt|x64'">
@@ -136,4 +137,16 @@
     <Folder Include="ShimApiClasses\" />
   </ItemGroup>
 
+  <ItemGroup Condition="$(CpuOnlyBuild)">
+    <Compile Include="CNTKLibraryManagedDll-CPUOnly-AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup Condition="$(GpuBuild)">
+    <Compile Include="CNTKLibraryManagedDll-GPU-AssemblyInfo.cs" />
+  </ItemGroup>
+  
+  <Target Name="Build" Condition="$(HasSwig)" DependsOnTargets="$(BuildDependsOn)" />
+  <Target Name="CheckDependencies">
+    <Warning Condition="!$(HasSwig)" Text="The project requires SWIG to be installed. Please see https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-CNTK-on-Windows#optional-swig for installation instructions." />
+  </Target>
+  
 </Project>

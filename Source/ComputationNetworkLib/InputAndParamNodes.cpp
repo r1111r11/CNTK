@@ -294,6 +294,20 @@ std::tuple<size_t, size_t, ElemType> LearnableParameter<ElemType>::InitRandom(Ma
     return std::make_tuple(fanOut, fanIn, range);
 }
 
+template <>
+std::tuple<size_t, size_t, char> LearnableParameter<char>::InitRandom(Matrix<char>& valueMatrix,
+    const TensorShape& sampleShape,
+    const wstring& type,
+    const unsigned long randomSeed,
+    const char initValueScale,
+    const size_t initFilterRank,
+    const int initOutputRank,
+    const bool initOnCPUOnly,
+    DEVICEID_TYPE deviceId)
+{
+    return std::make_tuple((size_t)0, (size_t)0, (char)0.0f);
+}
+
 // Initialize with bilinear interpolation coefficients (useful for deconvolution layer).
 template <class ElemType>
 void LearnableParameter<ElemType>::InitBilinear(Matrix<ElemType>& valueMatrix, const TensorShape& sampleShape, size_t kernelWidth, size_t kernelHeight, DEVICEID_TYPE deviceId)

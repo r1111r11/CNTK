@@ -512,8 +512,8 @@ namespace CNTK
         if (dataType != DataType::Unknown &&
             dataType != DataType::Float &&
             dataType != DataType::Double &&
-            dataType != DataType::Float16
-	    dataType != DataType::Int8)
+            dataType != DataType::Float16 &&
+            dataType != DataType::Int8)
         {
             LogicError("Unexpected variable datatype '%ls':'%u' (%s).", 
                        dataTypeKey.c_str(), 

@@ -348,6 +348,20 @@ void LearnableParameter<ElemType>::InitBilinear(Matrix<ElemType>& valueMatrix, c
     valueMatrix.TransferToDeviceIfNotThere(deviceId, true);
 }
 
+template <>
+std::tuple<size_t, size_t, char> LearnableParameter<char>::InitRandom(Matrix<char>& valueMatrix,
+		    const TensorShape& sampleShape,
+		        const wstring& type,
+			    const unsigned long randomSeed,
+			        const char initValueScale,
+				    const size_t initFilterRank,
+				        const int initOutputRank,
+					    const bool initOnCPUOnly,
+					        DEVICEID_TYPE deviceId)
+{
+	    return std::make_tuple((size_t)0, (size_t)0, (char)0.0f);
+}
+
 // initialize by reading a matrix from a text file
 template <class ElemType>
 void LearnableParameter<ElemType>::InitFromFile(const wstring& initFromFilePath)

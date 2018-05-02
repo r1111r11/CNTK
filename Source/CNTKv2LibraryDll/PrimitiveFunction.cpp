@@ -247,7 +247,7 @@ namespace CNTK
     {
         if (m_op == PrimitiveOpType::Combine)
             outputs.assign(m_inputs.begin(), m_inputs.end());
-        else if (m_op == PrimitiveOpType::NoOp || m_op == PrimitiveOpType::QuantizedProxyTimes)
+        else if (IsSimpleInferOutputOp())
             outputs.push_back(OutputVariable(m_inputs[0].Shape(), m_inputs[0].GetDataType(), m_inputs[0].DynamicAxes(), m_inputs[0].NeedsGradient(), Name()));
         else
         {

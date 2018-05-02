@@ -797,6 +797,12 @@ namespace CNTK
 
         void InferOutputs(std::vector<Variable>& outputs) override;
 
+        bool IsSimpleInferOutputOp()
+        {
+            return m_op == PrimitiveOpType::NoOp ||
+                m_op == PrimitiveOpType::QuantizedProxyTimes;
+        }
+
         FunctionPtr Clone(const std::vector<Variable>& clonedInputs) override
         {
             return MakeSharedObject<PrimitiveFunction>(OpType(), clonedInputs, Dictionary(Attributes()), Name());

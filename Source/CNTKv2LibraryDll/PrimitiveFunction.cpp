@@ -247,7 +247,7 @@ namespace CNTK
     {
         if (m_op == PrimitiveOpType::Combine)
             outputs.assign(m_inputs.begin(), m_inputs.end());
-        else if (m_op == PrimitiveOpType::NoOp)
+        else if (m_op == PrimitiveOpType::NoOp || m_op == PrimitiveOpType::QuantizedProxyTimes)
             outputs.push_back(OutputVariable(m_inputs[0].Shape(), m_inputs[0].GetDataType(), m_inputs[0].DynamicAxes(), m_inputs[0].NeedsGradient(), Name()));
         else
         {
@@ -1085,6 +1085,12 @@ namespace CNTK
                                 outputShape[0] = k;
                             else if (k != 1)
                                 RuntimeError("Function '%S': cannot get k>1 items from a scalar.", AsString().c_str());
+                            break;
+                        }
+                        case PrimitiveOpType::QuantizedProxyTimes:
+                        {
+                            assert(m_inputs.size() == 4);
+                            outputShape = m_inputs[1].Shape();
                             break;
                         }
                         default:

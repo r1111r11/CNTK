@@ -1432,4 +1432,36 @@ private:
 template class OutputMultiplexerNode<float>;
 template class OutputMultiplexerNode<double>;
 
+// -----------------------------------------------------------------------
+// QuantizedProxyTimesNode is a placeholder node for a quantized times operation.
+// It enables saving a model with its parameters so that they can be loaded
+// from the optimized implementation (Halide) for execution.
+// -----------------------------------------------------------------------
+
+template <class ElemType>
+class QuantizedProxyTimesNode : public ComputationNode<ElemType>, public NumInputs<4>
+{
+    typedef ComputationNode<ElemType> Base; UsingComputationNodeMembersBoilerplate;
+    static const std::wstring TypeName() { return L"QuantizedProxyTimesNode"; }
+
+public:
+    DeclareConstructorFromConfigWithNumInputs(QuantizedProxyTimesNode);
+    QuantizedProxyTimesNode(DEVICEID_TYPE deviceId, const wstring& name)
+        : Base(deviceId, name)
+    {
+    }
+
+    virtual void /*ComputationNode::*/ ForwardProp(const FrameRange& fr) override
+    {
+        NOT_IMPLEMENTED
+    }
+
+    virtual void /*ComputationNode::*/ BackpropTo(const size_t inputIndex, const FrameRange& fr) override
+    {
+        NOT_IMPLEMENTED
+    }
+};
+
+template class QuantizedProxyTimesNode<float>;
+
 } } }

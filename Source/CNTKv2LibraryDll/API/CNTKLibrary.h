@@ -4798,6 +4798,12 @@ namespace CNTK
     ///
     CNTK_API FunctionPtr ReconcileDynamicAxes(const Variable& operand, const Variable& axesAsOperand, const std::wstring& name = L"");
 
+    ///
+    /// Creates and instance of CNTK built in operator for quantized times operation. However, this is a proxy operation
+    /// that simply assist saving the parameters for later execution by an optimized implementation. E.g. Halide.
+    ///
+    CNTK_API FunctionPtr QuantizedProxyTimes(const Variable& v1, const Variable& v2, const Variable& v3, const Variable& v4, const std::wstring& name = L"");
+
     namespace Sequence
     {
         CNTK_API FunctionPtr IsFirst(const Variable& operand, const std::wstring& name = L"");

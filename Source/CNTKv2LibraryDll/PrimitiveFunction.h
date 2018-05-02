@@ -117,6 +117,7 @@ namespace CNTK
         {PrimitiveOpType::ConstantOp, L"ConstantOp"},
         {PrimitiveOpType::Squeeze, L"Squeeze"},
         {PrimitiveOpType::Cast, L"Cast" },
+        {PrimitiveOpType::QuantizedProxyTimes, L"QuantizedProxyTimes" },
     };
 
     inline const std::wstring& PrimitiveOpTypeName(PrimitiveOpType opType)

@@ -254,7 +254,9 @@ bindings/python/cntk/i_plus_i_0.mod
 # CSharp bindings
 bindings/csharp/Swig/cntk_cs_wrap.h
 bindings/csharp/Swig/cntk_cs_wrap.cxx
-bindings/csharp/CNTKLibraryManagedDll/SwigProxyClasses/*.cs
+bindings/csharp/Swig/cntk_cs_wrap.cxx
+bindings/csharp/CNTKLibraryManagedDll/SwigProxyClasses/GeneratedCode/Debug/*.cs
+bindings/csharp/CNTKLibraryManagedDll/SwigProxyClasses/GeneratedCode/Release/*.cs
 
 # Java bindings
 bindings/java/Swig/cntk_java_wrap.h

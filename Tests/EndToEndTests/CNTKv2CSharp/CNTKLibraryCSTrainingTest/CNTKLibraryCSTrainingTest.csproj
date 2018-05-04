@@ -19,8 +19,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CNTK.CNTKLibraryCSTrainingTest</RootNamespace>
     <AssemblyName>CNTKLibraryCSTrainingTest</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition="$(DebugBuild)">
     <DebugSymbols>true</DebugSymbols>
@@ -51,7 +53,10 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cntk.Core.Managed-$(CntkComponentVersion), Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64" />
+    <Reference Include="Cntk.Core.Managed.Standard-$(CntkComponentVersion)">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\x64\$(Configuration)\Cntk.Core.Managed.Standard-$(CntkComponentVersion).dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
   </ItemGroup>

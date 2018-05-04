@@ -374,7 +374,7 @@ namespace CNTK
                 // Directly copy the data as a byte array.
                 auto size = src.Shape().TotalSize();
                 const char* buffer = src.DataBuffer<char>();
-                dst->mutable_bytes_value()->set_value(buffer,size);
+                dst->mutable_bytes_value()->set_value(buffer, size);
             }
         }
     }
